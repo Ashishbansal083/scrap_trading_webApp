@@ -4,8 +4,8 @@ import ScrapCategory from '../components/ScrapCategory';
 const page = async({params}) => {
   const {slug} = await params ;
   return (
-    <div>{slug} : scrapRates 
-    <div>
+    <div className='p-10'>{slug} : scrapRates 
+    <div >
       <ScrapCategory/>
     </div>
     
