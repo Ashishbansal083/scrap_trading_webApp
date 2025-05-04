@@ -1,18 +1,17 @@
-import React from 'react';
-import ScrapCategory from '../components/ScrapCategory';
+import React from "react";
+import CardContainer from "../components/CardContainer";
 
-const page = async({params}) => {
-  const {slug} = await params ;
+
+const page = async ({ params }) => {
+  const { slug } = await params;
   return (
-    <div className='p-10'>{slug} : scrapRates 
-    <div >
-      <ScrapCategory/>
+    <div className="p-10">
+      {slug} : scrapRates
+      <div>
+       <CardContainer/>
+      </div>
     </div>
-    
-    
-    </div>
-
-  )
-}
+  );
+};
 
 export default page;
