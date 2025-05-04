@@ -4,11 +4,16 @@ import Scrap_item from '../components/Scrap_item';
 
 const CardContainer = () => {
   return (
-    <div className='flex flex-row gap-4'>
+    <div className='flex flex-row gap-[100px]'>
         <div className='basis-1/4'>
             <ScrapCategory/>
         </div>
-        <div className='basis-3/4'>
+        <div className='basis-3/4 flex flex-row gap-4 flex-wrap'>
+            <Scrap_item/>
+            <Scrap_item/>
+            <Scrap_item/>
+            <Scrap_item/>
+            <Scrap_item/>
             <Scrap_item/>
         </div>
     </div>
