@@ -6,7 +6,8 @@ const page = async ({ params }) => {
   const { slug } = await params;
   return (
     <div className="p-10">
-      {slug} : scrapRates
+      {/* <h2>{slug} : scrapRates</h2> */}
+      
       <div>
        <CardContainer/>
       </div>
