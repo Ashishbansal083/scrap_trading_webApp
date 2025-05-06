@@ -4,7 +4,7 @@ import React from "react";
 const ScrapCategory = () => {
   return (
     <div >
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg">
         <Image
           className="w-full"
           width={400}
