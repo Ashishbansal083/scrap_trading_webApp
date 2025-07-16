@@ -9,7 +9,7 @@ const page = async ({ params }) => {
       {/* <h2>{slug} : scrapRates</h2> */}
       
       <div>
-       <CardContainer/>
+       <CardContainer city={slug}/>
       </div>
     </div>
   );

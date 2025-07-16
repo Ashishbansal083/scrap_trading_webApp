@@ -3,10 +3,11 @@ import ScrapCategory from "../components/ScrapCategory";
 import Scrap_item from "../components/Scrap_item";
 import SearchBar from "../components/SearchBar";
 
-const CardContainer = () => {
+const CardContainer = ({city}) => {
   return (
     <div  className="flex flex-col gap-8">
       <div className=" flex justify-center"><p className="text-6xl">Scrap prices</p></div>
+      <div className=" flex justify-center"><p className="text-3xl border-2 border-green-600 rounded-lg p-2 ">{city}</p></div>
       <div className="w-full "><SearchBar/></div>
       <div className="flex flex-row gap-[100px]">
         <div className="basis-1/4">
