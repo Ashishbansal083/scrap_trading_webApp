@@ -24,8 +24,15 @@ export default function RootLayout({ children }) {
             >
               Services
             </Link>
+
             <Link href="/" className="text-green-600 hover:text-green-900">
               Home
+            </Link>
+            <Link
+              href="/admin"
+              className="text-green-600 hover:text-green-900"
+            >
+              add item
             </Link>
           </nav>
 
