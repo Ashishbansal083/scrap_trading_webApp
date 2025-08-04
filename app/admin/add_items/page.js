@@ -9,21 +9,21 @@ const page=()=> {
     category: "",
     pricePerKg: "",
   });
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleImageChange = (e) => {
-    setImage(e.target.files[0]);
-  };
+  // const handleImageChange = (e) => {
+  //   setImage(e.target.files[0]);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     Object.entries(form).forEach(([key, value]) => formData.append(key, value));
-    if (image) formData.append("image", image);
+    // if (image) formData.append("image", image);
 
     const res = await fetch("/api/item", {
       method: "POST",
@@ -70,13 +70,13 @@ const page=()=> {
           onChange={handleChange}
           className="w-full border p-2 rounded"
         />
-        <input
+        {/* <input
           type="file"
           accept="image/*"
           onChange={handleImageChange}
           required
           className="w-full"
-        />
+        /> */}
         <button
           type="submit"
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"

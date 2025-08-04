@@ -14,20 +14,20 @@ export async function POST(req) {
   const description = data.get("description");
   const category = data.get("category");
   const pricePerKg = data.get("pricePerKg"); 
-  const image = data.get("image");
+  // const image = data.get("image");
 
-  const bytes = await image.arrayBuffer();
-  const buffer = Buffer.from(bytes);
+  // const bytes = await image.arrayBuffer();
+  // const buffer = Buffer.from(bytes);
 
-  const uploadPath = path.join(process.cwd(), "public/uploads", image.name);
-  await writeFile(uploadPath, buffer);
+  // const uploadPath = path.join(process.cwd(), "public/uploads", image.name);
+  // await writeFile(uploadPath, buffer);
 
   const item = await Item.create({
     name,
     description,
     category,
     pricePerKg,
-    imageUrl: `/uploads/${image.name}`,
+    // imageUrl: `/uploads/${image.name}`,
   });
 
   return NextResponse.json({ message: "Item added", item });
