@@ -31,5 +31,15 @@ export async function POST(req) {
   });
 
   return NextResponse.json({ message: "Item added", item });
-}
+};
+
+export async function GET() {
+  try {
+    await dbConnect();
+    const items = await Item.find();
+    return NextResponse.json({ items });
+  } catch (error) {
+    return NextResponse.json({ message: "Error fetching items", error }, { status: 500 });
+  }
+};
 

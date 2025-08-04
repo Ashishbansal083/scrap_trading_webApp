@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Scrap_item = () => {
+const Scrap_item = ({name,pricePerKg}) => {
   return (
     <div className="max-w-sm w-full  shadow-lg rounded-2xl overflow-hidden  lg:max-w-[300px] lg:max-h-[150px] lg:flex ">
       <div
@@ -21,9 +21,9 @@ const Scrap_item = () => {
       <div className="basis-1/2       p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
           <div className="text-gray-900 font-bold text-xl mb-2">
-            Item :Heavy Iron Scrap
+            Item :{name}
           </div>
-          <p className="text-gray-700 text-base">Rate : 25₹/kg</p>
+          <p className="text-gray-700 text-base">Rate : {pricePerKg}₹/kg</p>
         </div>
       </div>
     </div>

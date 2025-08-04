@@ -32,6 +32,10 @@ const page=()=> {
 
     const result = await res.json();
     alert(result.message);
+    setForm({name: "",
+    description: "",
+    category: "",
+    pricePerKg: "",});
   };
 
   return (
